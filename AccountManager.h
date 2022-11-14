@@ -20,7 +20,6 @@ public:
     ~AccountManager();
     void run();
 
-protected:
     char getMenuChoice() const;
     void perform(char choice);
     // methods invoked to handle menu choices
@@ -35,12 +34,10 @@ protected:
     void changePassword(const string& userName, const string& newPassword);
     void printAccounts();
 
-private:
+public:        // should be private, but needs to be public for testing
     map<string, string> myAccounts;  // maps userNames to passwords
-    typedef pair<string, string>
-        stringPair;     // for inserting items into the map
+    typedef pair<string, string> stringPair; // for inserting items into the map
     string myFileName;  // file containing account info
-    friend class AccountManagerTester;
 };
 
 #endif /*ACCOUNTMANAGER_H_*/
