@@ -100,7 +100,7 @@ void AccountManager::perform(char choice) {
                  << " is not supported\n"
                  << endl;
     }
-    //   printAccounts();
+    printAccounts();
 }
 
 /* method invoked for choice 'a'
